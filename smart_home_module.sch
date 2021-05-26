@@ -25,64 +25,248 @@ F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/ATmega328_P%20AVR%20MCU%20w
 	1    0    0    -1  
 $EndComp
 $Comp
-L Relay:DIPxx-1Cxx-51x K2
-U 1 1 60AE6E00
-P 7300 3950
-F 0 "K2" H 7730 3996 50  0000 L CNN
-F 1 "DIPxx-1Cxx-51x" H 7730 3905 50  0000 L CNN
-F 2 "Relay_THT:Relay_SPDT_SANYOU_SRD_Series_Form_C" H 7750 3900 50  0001 L CNN
-F 3 "https://standexelectronics.com/wp-content/uploads/datasheet_reed_relay_DIP.pdf" H 7300 3950 50  0001 C CNN
-	1    7300 3950
-	1    0    0    -1  
-$EndComp
-$Comp
 L Relay:DIPxx-1Cxx-51x K1
 U 1 1 60AE7F1B
-P 4700 6100
-F 0 "K1" H 5130 6146 50  0000 L CNN
-F 1 "DIPxx-1Cxx-51x" H 5130 6055 50  0000 L CNN
-F 2 "Relay_THT:Relay_SPDT_SANYOU_SRD_Series_Form_C" H 5150 6050 50  0001 L CNN
-F 3 "https://standexelectronics.com/wp-content/uploads/datasheet_reed_relay_DIP.pdf" H 4700 6100 50  0001 C CNN
-	1    4700 6100
+P 4800 5650
+F 0 "K1" H 5230 5696 50  0000 L CNN
+F 1 "DIPxx-1Cxx-51x" H 5230 5605 50  0000 L CNN
+F 2 "Relay_THT:Relay_SPDT_SANYOU_SRD_Series_Form_C" H 5250 5600 50  0001 L CNN
+F 3 "https://standexelectronics.com/wp-content/uploads/datasheet_reed_relay_DIP.pdf" H 4800 5650 50  0001 C CNN
+	1    4800 5650
 	1    0    0    -1  
 $EndComp
 $Comp
 L Transistor_BJT:BC817 Q1
 U 1 1 60AF253A
-P 4400 7100
-F 0 "Q1" H 4591 7146 50  0000 L CNN
-F 1 "BC817" H 4591 7055 50  0000 L CNN
-F 2 "Package_TO_SOT_SMD:SOT-23" H 4600 7025 50  0001 L CIN
-F 3 "https://www.onsemi.com/pub/Collateral/BC818-D.pdf" H 4400 7100 50  0001 L CNN
-	1    4400 7100
+P 4500 6650
+F 0 "Q1" H 4691 6696 50  0000 L CNN
+F 1 "BC817" H 4691 6605 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 4700 6575 50  0001 L CIN
+F 3 "https://www.onsemi.com/pub/Collateral/BC818-D.pdf" H 4500 6650 50  0001 L CNN
+	1    4500 6650
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	4500 6400 4500 6900
+	4600 5950 4600 6150
 $Comp
 L power:GND #PWR0101
 U 1 1 60AF3893
-P 4500 7650
-F 0 "#PWR0101" H 4500 7400 50  0001 C CNN
-F 1 "GND" H 4505 7477 50  0000 C CNN
-F 2 "" H 4500 7650 50  0001 C CNN
-F 3 "" H 4500 7650 50  0001 C CNN
-	1    4500 7650
+P 4600 7200
+F 0 "#PWR0101" H 4600 6950 50  0001 C CNN
+F 1 "GND" H 4605 7027 50  0000 C CNN
+F 2 "" H 4600 7200 50  0001 C CNN
+F 3 "" H 4600 7200 50  0001 C CNN
+	1    4600 7200
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	4500 7650 4500 7300
+	4600 7200 4600 6850
 $Comp
 L Device:R R1
 U 1 1 60AF403C
-P 3650 7100
-F 0 "R1" V 3443 7100 50  0000 C CNN
-F 1 "1k" V 3534 7100 50  0000 C CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 3580 7100 50  0001 C CNN
-F 3 "~" H 3650 7100 50  0001 C CNN
-	1    3650 7100
+P 3750 6650
+F 0 "R1" V 3543 6650 50  0000 C CNN
+F 1 "1k" V 3634 6650 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 3680 6650 50  0001 C CNN
+F 3 "~" H 3750 6650 50  0001 C CNN
+	1    3750 6650
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	3800 7100 4200 7100
+	3900 6650 4300 6650
+Text GLabel 3250 6650 0    50   Input ~ 0
+CTRL_1
+Wire Wire Line
+	3250 6650 3600 6650
+$Comp
+L Device:LED D1
+U 1 1 60AEE51F
+P 3400 5800
+F 0 "D1" V 3439 5682 50  0000 R CNN
+F 1 "LED" V 3348 5682 50  0000 R CNN
+F 2 "LED_SMD:LED_0603_1608Metric" H 3400 5800 50  0001 C CNN
+F 3 "~" H 3400 5800 50  0001 C CNN
+	1    3400 5800
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R2
+U 1 1 60AEEC01
+P 3400 5350
+F 0 "R2" V 3193 5350 50  0000 C CNN
+F 1 "220" V 3284 5350 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 3330 5350 50  0001 C CNN
+F 3 "~" H 3400 5350 50  0001 C CNN
+	1    3400 5350
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	3400 5500 3400 5650
+Wire Wire Line
+	3400 5950 3400 6150
+Wire Wire Line
+	3400 6150 4000 6150
+Connection ~ 4600 6150
+Wire Wire Line
+	4600 6150 4600 6450
+Wire Wire Line
+	3400 5200 3400 5050
+Wire Wire Line
+	3400 5050 4000 5050
+Wire Wire Line
+	4600 5050 4600 5350
+Text GLabel 3050 5050 0    50   Input ~ 0
+VIN
+Wire Wire Line
+	3050 5050 3400 5050
+Connection ~ 3400 5050
+$Comp
+L Device:D D2
+U 1 1 60AF67A2
+P 4000 5600
+F 0 "D2" V 3954 5680 50  0000 L CNN
+F 1 "D" V 4045 5680 50  0000 L CNN
+F 2 "Diode_SMD:D_SMA" H 4000 5600 50  0001 C CNN
+F 3 "~" H 4000 5600 50  0001 C CNN
+	1    4000 5600
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4000 5450 4000 5050
+Connection ~ 4000 5050
+Wire Wire Line
+	4000 5050 4600 5050
+Wire Wire Line
+	4000 5750 4000 6150
+Connection ~ 4000 6150
+Wire Wire Line
+	4000 6150 4600 6150
+$Comp
+L Relay:DIPxx-1Cxx-51x K2
+U 1 1 60B03DBF
+P 4800 2550
+F 0 "K2" H 5230 2596 50  0000 L CNN
+F 1 "DIPxx-1Cxx-51x" H 5230 2505 50  0000 L CNN
+F 2 "Relay_THT:Relay_SPDT_SANYOU_SRD_Series_Form_C" H 5250 2500 50  0001 L CNN
+F 3 "https://standexelectronics.com/wp-content/uploads/datasheet_reed_relay_DIP.pdf" H 4800 2550 50  0001 C CNN
+	1    4800 2550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Transistor_BJT:BC817 Q2
+U 1 1 60B03F13
+P 4500 3550
+F 0 "Q2" H 4691 3596 50  0000 L CNN
+F 1 "BC817" H 4691 3505 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 4700 3475 50  0001 L CIN
+F 3 "https://www.onsemi.com/pub/Collateral/BC818-D.pdf" H 4500 3550 50  0001 L CNN
+	1    4500 3550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4600 2850 4600 3050
+$Comp
+L power:GND #PWR0102
+U 1 1 60B03F1E
+P 4600 4100
+F 0 "#PWR0102" H 4600 3850 50  0001 C CNN
+F 1 "GND" H 4605 3927 50  0000 C CNN
+F 2 "" H 4600 4100 50  0001 C CNN
+F 3 "" H 4600 4100 50  0001 C CNN
+	1    4600 4100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4600 4100 4600 3750
+$Comp
+L Device:R R4
+U 1 1 60B03F29
+P 3750 3550
+F 0 "R4" V 3543 3550 50  0000 C CNN
+F 1 "1k" V 3634 3550 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 3680 3550 50  0001 C CNN
+F 3 "~" H 3750 3550 50  0001 C CNN
+	1    3750 3550
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3900 3550 4300 3550
+Text GLabel 3250 3550 0    50   Input ~ 0
+CTRL_2
+Wire Wire Line
+	3250 3550 3600 3550
+$Comp
+L Device:LED D3
+U 1 1 60B03F36
+P 3400 2700
+F 0 "D3" V 3439 2582 50  0000 R CNN
+F 1 "LED" V 3348 2582 50  0000 R CNN
+F 2 "LED_SMD:LED_0603_1608Metric" H 3400 2700 50  0001 C CNN
+F 3 "~" H 3400 2700 50  0001 C CNN
+	1    3400 2700
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R3
+U 1 1 60B03F40
+P 3400 2250
+F 0 "R3" V 3193 2250 50  0000 C CNN
+F 1 "220" V 3284 2250 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 3330 2250 50  0001 C CNN
+F 3 "~" H 3400 2250 50  0001 C CNN
+	1    3400 2250
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	3400 2400 3400 2550
+Wire Wire Line
+	3400 2850 3400 3050
+Wire Wire Line
+	3400 3050 4000 3050
+Connection ~ 4600 3050
+Wire Wire Line
+	4600 3050 4600 3350
+Wire Wire Line
+	3400 2100 3400 1950
+Wire Wire Line
+	3400 1950 4000 1950
+Wire Wire Line
+	4600 1950 4600 2250
+Text GLabel 3050 1950 0    50   Input ~ 0
+VIN
+Wire Wire Line
+	3050 1950 3400 1950
+Connection ~ 3400 1950
+$Comp
+L Device:D D4
+U 1 1 60B03F55
+P 4000 2500
+F 0 "D4" V 3954 2580 50  0000 L CNN
+F 1 "D" V 4045 2580 50  0000 L CNN
+F 2 "Diode_SMD:D_SMA" H 4000 2500 50  0001 C CNN
+F 3 "~" H 4000 2500 50  0001 C CNN
+	1    4000 2500
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4000 2350 4000 1950
+Connection ~ 4000 1950
+Wire Wire Line
+	4000 1950 4600 1950
+Wire Wire Line
+	4000 2650 4000 3050
+Connection ~ 4000 3050
+Wire Wire Line
+	4000 3050 4600 3050
+$Comp
+L Connector_Generic:Conn_02x04_Odd_Even J1
+U 1 1 60B1345A
+P 7250 3150
+F 0 "J1" H 7300 3467 50  0000 C CNN
+F 1 "Conn_02x04_Odd_Even" H 7300 3376 50  0000 C CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_2x04_P2.54mm_Vertical" H 7250 3150 50  0001 C CNN
+F 3 "~" H 7250 3150 50  0001 C CNN
+	1    7250 3150
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
