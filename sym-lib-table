@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name cl_relay)(type Legacy)(uri /home/AVIASIM/kokorevys/kicad_projects/sb_plt_engine_ctl/cl_relay.lib)(options "")(descr ""))
+)
